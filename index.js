@@ -43,7 +43,7 @@ app.post("/api/restaurants", function(req, res){
 
 app.delete("/api/restaurants/:name", function(req, res){
   Restaurant.findOneAndRemove({name: req.params.name}).then(function(){
-    res.json({success: true})
+    res.json({success: true});
   });
 });
 

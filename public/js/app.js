@@ -60,8 +60,8 @@ function showController ($state, $stateParams, Restaurant) {
   this.update = function () {
     this.restaurant.$update({name: $stateParams.name})
   }
-  this.destory = function () {
-    this.restaurant.$delete({name: $stateParams.name}).then(function(){
+  this.destroy = function () {
+    this.restaurant.$delete({name: $stateParams.name}).then(function() {
       $state.go("index")
     })
   }
