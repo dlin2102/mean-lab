@@ -26,14 +26,14 @@ angular
   function Router($stateProvider) {
     $stateProvider
     .state("index", {
-      url: '/restaurants'
+      url: '/restaurants',
       templateUrl: "/assets/js/ng-views/index.html",
       controller: "indexCtrl",
       controllerAs: "vm"
     })
     .state("show", {
     url: "/restaurants/:name",
-    templateUrl: "assets/js/ng-views/show.html",
+    templateUrl: "/assets/js/ng-views/show.html",
     controller: "showCtrl",
     controllerAs: "vm"
   })
@@ -56,7 +56,7 @@ angular
 }
 
 function showController ($stateParams, Restaurant) {
-  this.restaurants = Restaurant.get({name: $stateParams.name})
+  this.restaurant = Restaurant.get({name: $stateParams.name})
   this.update = function () {
     this.restaurant.$update({name: $stateParams.name})
   }

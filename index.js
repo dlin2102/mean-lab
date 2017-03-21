@@ -23,7 +23,7 @@ app.get("/", function(req, res){
   res.render("restaurants");
 });
 
-app.get("/api", function(req, res){
+app.get("/api/restaurants", function(req, res){
   Restaurant.find({}).then(function(restaurants){
     res.json(restaurants)
   });
