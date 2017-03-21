@@ -55,7 +55,7 @@ angular
   }
 }
 
-function showController ($stateParams, Restaurant) {
+function showController ($state, $stateParams, Restaurant) {
   this.restaurant = Restaurant.get({name: $stateParams.name})
   this.update = function () {
     this.restaurant.$update({name: $stateParams.name})
